@@ -26,7 +26,7 @@ public class AntiGeoCode {
         // TODO code application logic here
         File file = new File("E:\\大创\\DaChuang\\exifFile.jpg"); // file path can be changed for test
         try {
-            printImageTags(file);
+            System.out.println(getFormattedAddress(file));
         } catch (Exception ex) {
             Logger.getLogger(AntiGeoCode.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -35,7 +35,7 @@ public class AntiGeoCode {
     /**
      * 读取照片里面的信息
      */
-    private static void printImageTags(File file) throws Exception{
+    private static String getFormattedAddress(File file) throws Exception{
         Metadata metadata = ImageMetadataReader.readMetadata(file);
         String lat = new String();
         String log = new String();
@@ -56,7 +56,8 @@ public class AntiGeoCode {
         JSONObject jsonObject = JSON.parseObject(add);
         JSONObject result = jsonObject.getJSONObject("result");
         String address = result.getString("formatted_address");
-        System.out.println(address);
+//        System.out.println(address);
+        return address;
     }
 
     private static String pointToLatLong(String point) {
