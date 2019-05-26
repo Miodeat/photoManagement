@@ -80,7 +80,7 @@ public class AntiGeoCode {
          * @return res address
          */
         // 参数解释: 纬度,经度 type 001 (100代表道路，010代表POI，001代表门址，111可以同时显示前三项)
-        
+
         String urlString = "https://api.map.baidu.com/geocoder/v2/?ak=AmgZttBtRXOEY7R9pkC1ScETpDUKlVef&location="
                 + lat +"," + log + "&output=json&pois=1";
 
