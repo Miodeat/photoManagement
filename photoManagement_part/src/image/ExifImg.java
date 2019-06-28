@@ -27,10 +27,46 @@ public class ExifImg {
     private int imgHeight;
     private Image img;
 
+    public static void main(String[] args){
+        ExifImg test = new ExifImg("E:\\大创\\DaChuang\\exifFile.jpg");
+
+        System.out.println(test.filePath);
+        System.out.println("GPS latitute: " + test.GPSLat);
+        System.out.println("GPS longitute: " + test.GPSLog);
+        System.out.println("image width: " + test.imgWidth + " pixel");
+        System.out.println("image height: " + test.imgHeight + " pixel");
+        System.out.println("date and time: " + test.dateAndTime);
+        System.out.println("formatted address: " + test.formattedAddress);
+    }
+
+    public String getGPSLat(){
+        return GPSLat;
+    }
+
+    public String getGPSLog(){
+        return GPSLog;
+    }
+
+    public String getDateAndTime(){
+        return dateAndTime;
+    }
+
+    public int getImgWidth(){
+        return imgWidth;
+    }
+
+    public int getImgHeight(){
+        return imgHeight;
+    }
+
+    public String getFormattedAddress(){
+        return formattedAddress;
+    }
+
     // turn attribute image width or image height from String to int
     private int widAndHeiStringtoInt(String data){
         int endIndex = data.indexOf(" ");
-        int result = Integer.valueOf(data.substring(endIndex));
+        int result = Integer.valueOf(data.substring(0, endIndex));
         return result;
     }
 
@@ -74,7 +110,7 @@ public class ExifImg {
                 }
             }
         }
-        this.formattedAddress = AntiGeoCode.getAdd(GPSLog,GPSLat);
+        this.formattedAddress = AntiGeoCode.getFormattedAddress(GPSLog,GPSLat);
         readImg(file);
 
         file.exists();

@@ -4,8 +4,14 @@ Just a project from some undergraduates. The purpose of this project is to creat
 # update diary
 ## 2019.6.28
 ### modified by Miodeat
+#### 8:30
 1. add a overload of function "getFormattedAddress", the new function has params which are GPS latitute and GPS longitude. And it will return formatted address.
 2. add a new class named ExifImg, which has member : file path, date and time, GPS latitude, GPS longitude, formatted address, image width, image height and image. The class also has function read, readImg, widAndHeiStringtoInt.
+#### 9:08
+1. turn function AntiGeoCode.getFormattedAddress from private to public.
+2. fix the incorrect call of AntiGeoCode.getAdd().
+3. add functions which can get members.
+4. fix the bug cause by incorrect params of function subString.
 
 ## 2019.5.26
 ### modified by Miodeat

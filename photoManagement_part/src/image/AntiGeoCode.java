@@ -36,7 +36,7 @@ public class AntiGeoCode {
     /**
      * 读取照片里面的信息
      */
-    private static String getFormattedAddress(File file) throws Exception{
+    public static String getFormattedAddress(File file) throws Exception{
         Metadata metadata = ImageMetadataReader.readMetadata(file);
         String lat = new String();
         String log = new String();
@@ -57,7 +57,7 @@ public class AntiGeoCode {
         return jsonAddToFormattedAdd(add);
     }
 
-    private static String getFormattedAddress(String GPSLon, String GPSLat){
+    public static String getFormattedAddress(String GPSLon, String GPSLat){
         String log = pointToLatLong(GPSLon);
         String lat = pointToLatLong(GPSLat);
 
