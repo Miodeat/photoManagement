@@ -6,7 +6,7 @@ Just a project from some undergraduates. The purpose of this project is to creat
 ### modified by Miodeat
 1. add a overload of function "getFormattedAddress", the new function has params which are GPS latitute and GPS longitude. And it will return formatted address.
 2. add a new class named ExifImg, which has member : file path, date and time, GPS latitude, GPS longitude, formatted address, image width, image height and image. The class also has function read, readImg, widAndHeiStringtoInt.
-<br>
+
 ## 2019.5.26
 ### modified by Miodeat
 1. Have finished the class named AntiGeoCode that can change longitude and latitude to formatted address.<br>
