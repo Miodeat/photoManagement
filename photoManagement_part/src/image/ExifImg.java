@@ -27,6 +27,7 @@ public class ExifImg {
     private int imgHeight;
     private Image img;
 
+    // turn attribute image width or image height from String to int
     private int widAndHeiStringtoInt(String data){
         int endIndex = data.indexOf(" ");
         int result = Integer.valueOf(data.substring(endIndex));
