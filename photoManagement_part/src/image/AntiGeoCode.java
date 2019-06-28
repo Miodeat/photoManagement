@@ -1,8 +1,9 @@
-/*
+package image;/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 
 import java.io.File;
 import java.net.URL;
@@ -53,10 +54,21 @@ public class AntiGeoCode {
             }
         }
         String add = getAdd(log, lat);
-        JSONObject jsonObject = JSON.parseObject(add);
+        return jsonAddToFormattedAdd(add);
+    }
+
+    private static String getFormattedAddress(String GPSLon, String GPSLat){
+        String log = pointToLatLong(GPSLon);
+        String lat = pointToLatLong(GPSLat);
+
+        String add = getAdd(log, lat);
+        return jsonAddToFormattedAdd(add);
+    }
+
+    private static String jsonAddToFormattedAdd(String jsonData){
+        JSONObject jsonObject = JSON.parseObject(jsonData);
         JSONObject result = jsonObject.getJSONObject("result");
         String address = result.getString("formatted_address");
-//        System.out.println(address);
         return address;
     }
 
