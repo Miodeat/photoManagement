@@ -58,6 +58,10 @@ public class AntiGeoCode {
     }
 
     public static String getFormattedAddress(String GPSLon, String GPSLat){
+        if(GPSLon == null || GPSLat == null){
+            return "";
+        }
+
         String log = pointToLatLong(GPSLon);
         String lat = pointToLatLong(GPSLat);
 

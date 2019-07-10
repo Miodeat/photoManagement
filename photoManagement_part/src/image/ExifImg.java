@@ -11,7 +11,6 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
-import image.AntiGeoCode;
 
 import javax.imageio.ImageIO;
 
@@ -22,13 +21,14 @@ public class ExifImg {
     private String dateAndTime;
     private String GPSLog;
     private String GPSLat;
+    private String[] faceTk;
 
     private int imgWidth;
     private int imgHeight;
     private Image img;
 
     public static void main(String[] args){
-        ExifImg test = new ExifImg("E:\\大创\\DaChuang\\exifFile.jpg");
+        ExifImg test = new ExifImg("E:\\大创\\DaChuang\\testFace.jpg");
 
         System.out.println(test.filePath);
         System.out.println("GPS latitute: " + test.GPSLat);
@@ -37,6 +37,11 @@ public class ExifImg {
         System.out.println("image height: " + test.imgHeight + " pixel");
         System.out.println("date and time: " + test.dateAndTime);
         System.out.println("formatted address: " + test.formattedAddress);
+        System.out.print("face_token: ");
+        for(String faTk : test.faceTk){
+            System.out.print(faTk + "\t");
+        }
+        System.out.println();
     }
 
     public String getGPSLat(){
@@ -63,6 +68,10 @@ public class ExifImg {
         return formattedAddress;
     }
 
+    public String[] getFaceTk(){
+        return faceTk;
+    }
+
     // turn attribute image width or image height from String to int
     private int widAndHeiStringtoInt(String data){
         int endIndex = data.indexOf(" ");
@@ -77,6 +86,7 @@ public class ExifImg {
 
     public void read(String filePath){
         File file = new File(filePath);
+        readImg(file);
         Metadata metadata = null;
         try {
             metadata = ImageMetadataReader.readMetadata(file);
@@ -111,6 +121,15 @@ public class ExifImg {
             }
         }
         this.formattedAddress = AntiGeoCode.getFormattedAddress(GPSLog,GPSLat);
+        String[] faceResult = FaceRec.recognition(file);
+        if(FaceRec.getIsError()){
+            faceTk = new String[0];
+
+        }
+        else {
+            faceTk = faceResult;
+        }
+
         readImg(file);
 
         file.exists();
@@ -123,4 +142,6 @@ public class ExifImg {
             e.printStackTrace();
         }
     }
+
+
 }
