@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -40,6 +39,11 @@ public class FaceRec {
     private static boolean isError = false;
 
     public static String[] recognition(File tar){
+        /**
+         * this function will get all face_tokens of faces in the picture.
+         * @param exif image which need to be recognize human faces as File.
+         * @return a String array contain all recognition code of faces in this image.
+         */
         String url = "https://api-cn.faceplusplus.com/facepp/v3/detect";
         byte[] buff = getBytesFromFile(tar);
 
@@ -55,7 +59,6 @@ public class FaceRec {
         try{
             byte[] bacd = post(url, map, byteMap);
             String str = new String(bacd);
-            System.out.println(str);
             faceToken = getfaceToken(str);
             return faceToken;
         }catch (Exception e) {
@@ -152,6 +155,7 @@ public class FaceRec {
         ins.close();
         return bytes;
     }
+
     private static String getBoundary() {
         StringBuilder sb = new StringBuilder();
         Random random = new Random();
@@ -183,7 +187,59 @@ public class FaceRec {
         return null;
     }
 
+    public static String createFaceSet(){
+        /**
+         * the function will create a new face set to storage face information
+         * @return return the id of face set had been created(faceset_token)
+         */
+        String url = "https://api-cn.faceplusplus.com/facepp/v3/faceset/create";
+        HashMap<String, String> map = new HashMap<>();
+        map.put("api_key", "IB29o41okBd85lADqKTuOr2dILbikl1E");
+        map.put("api_secret", "dLOsMaOYPdjeQ5Ir-ifHVR3hDiyeaElm");
+        String fSTk = "";
+        try {
+            byte[] bacd = post(url, map, null);
+            String jsonText = new String(bacd);
+            JSONObject jsOb = JSON.parseObject(jsonText);
+            fSTk = jsOb.getString("faceset_token");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return fSTk;
+    }
+
+    public static boolean compareFace(String faceTk1, String faceTk2){
+        /**
+         * @param face tokens of tow faces.
+         * @return true means tow faces are possibly from same person, false means they are not.
+         */
+        String url = "https://api-cn.faceplusplus.com/facepp/v3/compare";
+        HashMap<String, String> map = new HashMap<>();
+        map.put("api_key", "IB29o41okBd85lADqKTuOr2dILbikl1E");
+        map.put("api_secret", "dLOsMaOYPdjeQ5Ir-ifHVR3hDiyeaElm");
+        map.put("face_token1", faceTk1);
+        map.put("face_token2", faceTk2);
+        boolean result = false;
+        try {
+            byte[] bacd = post(url, map, null);
+            String jsonText = new String(bacd);
+            JSONObject jsOb = JSON.parseObject(jsonText);
+            float confi = jsOb.getFloat("confidence");
+            JSONObject thre = jsOb.getJSONObject("thresholds");
+            float mistake = thre.getFloat("1e-5");
+            result = confi >= mistake ? true : false;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+
     public static boolean getIsError(){
         return isError;
+    }
+
+    public static void setIsError(boolean param){
+        isError = param;
     }
 }

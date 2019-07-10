@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b16255e4-f485-4816-b179-cebd110b4d8e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/image/AntiGeoCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/image/AntiGeoCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/photoManagement_part/image/FaceRec.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/photoManagement_part/image/FaceRec.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/image/ExifImg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/image/ExifImg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/image/FaceRec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/image/FaceRec.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,42 +19,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/image/AntiGeoCode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-559">
-              <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+            <state relative-caret-position="-400">
+              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/image/FaceRec.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="186" column="23" selection-start-line="186" selection-start-column="23" selection-end-line="186" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6799#6800#0" expanded="true" />
-                <element signature="e#6828#6829#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/image/ExifImg.java">
+        <entry file="file://$PROJECT_DIR$/src/image/FaceRec.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+            <state relative-caret-position="185">
+              <caret line="67" column="20" lean-forward="true" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1245#1246#0" expanded="true" />
-                <element signature="e#1274#1275#0" expanded="true" />
-                <element signature="e#1306#1307#0" expanded="true" />
-                <element signature="e#1335#1336#0" expanded="true" />
-                <element signature="e#1650#1651#0" expanded="true" />
-                <element signature="e#1678#1679#0" expanded="true" />
+                <element signature="e#8556#8557#0" expanded="true" />
+                <element signature="e#8586#8587#0" expanded="true" />
+                <element signature="e#8637#8638#0" expanded="true" />
+                <element signature="e#8668#8669#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/image/ExifImg.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="126" column="18" lean-forward="true" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,9 +78,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/ExifImg.java" />
         <option value="$PROJECT_DIR$/src/AntiGeoCode.java" />
-        <option value="$PROJECT_DIR$/src/image/FaceRec.java" />
         <option value="$PROJECT_DIR$/src/image/AntiGeoCode.java" />
         <option value="$PROJECT_DIR$/src/image/ExifImg.java" />
+        <option value="$PROJECT_DIR$/src/image/FaceRec.java" />
       </list>
     </option>
   </component>
@@ -111,13 +109,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="photoManagement_part" type="b2602c69:ProjectViewProjectNode" />
               <item name="photoManagement_part" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="photoManagement_part" type="b2602c69:ProjectViewProjectNode" />
+              <item name="photoManagement_part" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="photoManagement_part" type="b2602c69:ProjectViewProjectNode" />
@@ -134,21 +136,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562738938210" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../xmpcore-5.1.2.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562747640791" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/lib-facepp_api.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -225,6 +228,8 @@
       <workItem from="1561682545569" duration="1202000" />
       <workItem from="1561683771466" duration="133000" />
       <workItem from="1562724037398" duration="11389000" />
+      <workItem from="1562739238956" duration="229000" />
+      <workItem from="1562739585036" duration="6738000" />
     </task>
     <task id="LOCAL-00001" summary="change function named &quot;printImageTag&quot; to &quot;getFormattedAddress&quot;, now this function will return the String of formatted address instead of printing it in console.">
       <created>1558848152299</created>
@@ -237,12 +242,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23298000" />
+    <option name="totallyTimeSpent" value="30265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2855228" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2935657" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -280,18 +285,6 @@
     <MESSAGE value="change function named &quot;printImageTag&quot; to &quot;getFormattedAddress&quot;, now this function will return the String of formatted address instead of printing it in console." />
     <option name="LAST_COMMIT_MESSAGE" value="change function named &quot;printImageTag&quot; to &quot;getFormattedAddress&quot;, now this function will return the String of formatted address instead of printing it in console." />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/image/ExifImg.java</url>
-          <line>123</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="jar://E:/jdk1.8.0_111/jre/lib/rt.jar!/java/net/URLClassLoader.class">
       <provider selected="true" editor-type-id="text-editor" />
@@ -303,40 +296,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/image/FaceRec.java">
+    <entry file="file://$PROJECT_DIR$/src/image/ExifImg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="186" column="23" selection-start-line="186" selection-start-column="23" selection-end-line="186" selection-end-column="23" />
+        <state relative-caret-position="149">
+          <caret line="126" column="18" lean-forward="true" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6799#6800#0" expanded="true" />
-            <element signature="e#6828#6829#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/image/AntiGeoCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-559">
-          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        <state relative-caret-position="-400">
+          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/image/ExifImg.java">
+    <entry file="file://$PROJECT_DIR$/src/image/FaceRec.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+        <state relative-caret-position="185">
+          <caret line="67" column="20" lean-forward="true" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1245#1246#0" expanded="true" />
-            <element signature="e#1274#1275#0" expanded="true" />
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="e#1335#1336#0" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#8556#8557#0" expanded="true" />
+            <element signature="e#8586#8587#0" expanded="true" />
+            <element signature="e#8637#8638#0" expanded="true" />
+            <element signature="e#8668#8669#0" expanded="true" />
           </folding>
         </state>
       </provider>

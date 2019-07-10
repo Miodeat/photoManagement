@@ -124,7 +124,7 @@ public class ExifImg {
         String[] faceResult = FaceRec.recognition(file);
         if(FaceRec.getIsError()){
             faceTk = new String[0];
-
+            FaceRec.setIsError(false);
         }
         else {
             faceTk = faceResult;

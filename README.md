@@ -2,6 +2,14 @@
 Just a project from some undergraduates. The purpose of this project is to create a application that can classify photos and search them by key-words. We MAY add some other functions if we can.
 <br>
 # update diary
+## 2019.7.10
+### modified by Miodeat
+#### 16:25
+1.add class named "FaceRe" to package image. Now can use the function named "recognition" of this class for face recognition.
+2.In class "FaceRe", we can use function named "createFaceSet" to create face set.
+3.In class "FaceRe", we can use function named "compareFace" to see if tow faces from same person.
+4.In class "ExifImg", function "read" now will storage the face_token as a member of class.
+
 ## 2019.6.28
 ### modified by Miodeat
 #### 8:30
