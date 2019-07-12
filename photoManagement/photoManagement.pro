@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-07-11T16:23:39
+# Project created by QtCreator 2019-07-12T10:32:18
 #
 #-------------------------------------------------
 
@@ -27,13 +27,13 @@ CONFIG += c++11
 
 SOURCES += \
         antigeocode.cpp \
-        exifimg.cpp \
+        exif.cpp \
         main.cpp \
         mainwindow.cpp
 
 HEADERS += \
         antigeocode.h \
-        exifimg.h \
+        exif.h \
         mainwindow.h
 
 FORMS += \

@@ -1,30 +1,30 @@
 #include "antigeocode.h"
 
 
-
-AntiGeoCode::AntiGeoCode()
+AntiGeoCode::AntiGeoCode(easyexif::EXIFInfo *exif)
 {
-
+    this->exif = exif;
 }
 
-void AntiGeoCode::callAntiGeoCodeAPI(QString GPSLat, QString GPSLog)
+void AntiGeoCode::callAntiGeoCodeAPI(double lat, double lon)
 {
     QNetworkAccessManager* netAccMana = new QNetworkAccessManager();
 
-    // turn latitute and longitute form degree to decimalism
-    QString lat = degreeToDouble(GPSLat);
-    QString log = degreeToDouble(GPSLog);
-
-    connect(netAccMana, &QNetworkAccessManager::finished, this, &AntiGeoCode::finishAntiGeo);
+    /* WARNING: The slot "finishAntiGeo" will be called only after the main thread finished!
+     *          Now I can not fix this problem.
+     *          Suggest all operations involving formatted address should be put in slot "finishAntiGeo"
+     */
+    connect(netAccMana, &QNetworkAccessManager::finished, this, &AntiGeoCode::finishAntiGeo, Qt::DirectConnection);
 
     // set url
     QString urlString = "https://api.map.baidu.com/geocoder/v2/?ak=AmgZttBtRXOEY7R9pkC1ScETpDUKlVef&location="
-                    + lat +"," + log + "&output=json&pois=1";
+                    + QString::number(lat) +"," + QString::number(lon) + "&output=json&pois=1";
     QUrl url(urlString + "user/get");
 
     QNetworkRequest request(url); // use url to build a request object
     request.setHeader(QNetworkRequest::ContentTypeHeader,QVariant("application/json;charset=utf-8")); // set request header
     netAccMana->get(request); // invoke api by using "get" method
+
 }
 
 
@@ -35,7 +35,8 @@ void AntiGeoCode::finishAntiGeo(QNetworkReply* reply)
         QByteArray data = reply->readAll(); // get reply
         QString datastr = QString::fromUtf8(data);
         QString formattedAdd = jsonProcessing(datastr); // get formatted address form reply
-        emit formattedAddReturn(formattedAdd); // emit signal
+        exif->formattedAdd = formattedAdd;
+        qDebug() << "slot finished\t" << exif->formattedAdd << "\n";
     }
     else{
        qDebug() << "Error code: " << isError << "\n";

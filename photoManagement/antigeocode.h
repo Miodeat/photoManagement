@@ -9,23 +9,23 @@
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QJsonDocument>
+#include "exif.h"
 
 class AntiGeoCode : public QObject
 {
     Q_OBJECT
 public:
-    AntiGeoCode();
-    void callAntiGeoCodeAPI(QString GPSLat, QString GPSLog);
+    AntiGeoCode(easyexif::EXIFInfo* exif);
+    void callAntiGeoCodeAPI(double lat, double lon);
 
 signals:
-    void formattedAddReturn(QString);
-
-private slots:
-    void finishAntiGeo(QNetworkReply* reply);
+    void slotFinished(QString add);
 
 private:
     QString degreeToDouble(QString src);
     QString jsonProcessing(QString jsonText);
+    void finishAntiGeo(QNetworkReply* reply);
+    easyexif::EXIFInfo* exif;
 
 };
 

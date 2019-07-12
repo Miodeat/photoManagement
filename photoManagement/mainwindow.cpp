@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    exif.loadFile(QString("E:\\DaChuang\\DaChuang\\exifFile.jpg"));
+
 }
 
 MainWindow::~MainWindow()
