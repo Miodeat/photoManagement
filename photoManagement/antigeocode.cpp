@@ -15,16 +15,16 @@ void AntiGeoCode::callAntiGeoCodeAPI(double lat, double lon)
      *          Suggest all operations involving formatted address should be put in slot "finishAntiGeo"
      */
     connect(netAccMana, &QNetworkAccessManager::finished, this, &AntiGeoCode::finishAntiGeo, Qt::DirectConnection);
+    //connect(netAccMana,&QNetworkAccessManager::finished,this,&QNetworkAccessManager::deleteLater);
 
     // set url
     QString urlString = "https://api.map.baidu.com/geocoder/v2/?ak=AmgZttBtRXOEY7R9pkC1ScETpDUKlVef&location="
                     + QString::number(lat) +"," + QString::number(lon) + "&output=json&pois=1";
     QUrl url(urlString + "user/get");
-
+    qDebug() <<url<<'\n';
     QNetworkRequest request(url); // use url to build a request object
     request.setHeader(QNetworkRequest::ContentTypeHeader,QVariant("application/json;charset=utf-8")); // set request header
     netAccMana->get(request); // invoke api by using "get" method
-
 }
 
 
