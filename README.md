@@ -2,6 +2,10 @@
 Just a project from some undergraduates. The purpose of this project is to create a application that can classify photos and search them by key-words. We MAY add some other functions if we can.
 
 # update diary
+## 2019.7.15 10.58
+### modified by Daisy
+1.alter database photomangement. Delete columns lat and lon and add column geom.Column geom allows you to insert point data directly.Just like this "insert into photo(photo_id,taken_time,path,photo_label,geom)
+values('1','2019-05-09','D:/images/test.jpg','学校',point(12.32232442,43.2324535)::geometry)"
 ## 2019.7.12 19.07
 ### modified by Daisy
 1. Create database photoMangement used to store information extracted from photos.It include two tables one is photo and the other is avatar.
