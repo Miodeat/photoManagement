@@ -3,9 +3,9 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    QApplication a(argc, argv);//定义并创建应用程序
+    MainWindow w;//定义并创建窗口
+    w.show();//窗口显示
 
-    return a.exec();
+    return a.exec();//应用程序运行
 }

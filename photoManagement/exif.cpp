@@ -404,9 +404,11 @@ IFEntry parseIFEntry(const unsigned char *buf, const unsigned offs,
                      const bool alignIntel, const unsigned base,
                      const unsigned len) {
     if (alignIntel) {
-        return std::move(parseIFEntry_temp<true>(buf, offs, base, len));
+        return parseIFEntry_temp<true>(buf, offs, base, len);
+        //return std::move(parseIFEntry_temp<true>(buf, offs, base, len));
     } else {
-        return std::move(parseIFEntry_temp<false>(buf, offs, base, len));
+        return parseIFEntry_temp<false>(buf, offs, base, len);
+        //return std::move(parseIFEntry_temp<false>(buf, offs, base, len));
     }
 }
 }
@@ -485,7 +487,9 @@ int easyexif::EXIFInfo::parseFrom(const unsigned char *buf, unsigned len) {
 }
 
 int easyexif::EXIFInfo::parseFrom(const string &data) {
-    return parseFrom((const unsigned char *)data.data(), data.length());
+    return parseFrom(
+          reinterpret_cast<const unsigned char *>(data.data()), static_cast<unsigned>(data.length()));
+    //return parseFrom((const unsigned char *)data.data(), data.length());
 }
 
 //
