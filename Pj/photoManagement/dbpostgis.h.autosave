@@ -1,0 +1,14 @@
+#ifndef DBPOSTGIS_H
+#define DBPOSTGIS_H
+#include <sql.h>
+#include <QSql>
+#include <QSqlDatabase>
+
+class dbPostgis
+{
+public:
+    dbPostgis();
+    
+};
+
+#endif // DBPOSTGIS_H
