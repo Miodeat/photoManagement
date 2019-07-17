@@ -1,11 +1,13 @@
 #include "antigeocode.h"
-
+#include <QFileDialog>
 
 AntiGeoCode::AntiGeoCode(easyexif::EXIFInfo *exif)
 {
     this->exif = exif;
 
+
 }
+
 void AntiGeoCode::callAntiGeoCodeAPI(double lat, double lon)
 {
     QNetworkAccessManager* netAccMana = new QNetworkAccessManager();
@@ -21,6 +23,7 @@ void AntiGeoCode::callAntiGeoCodeAPI(double lat, double lon)
     QString urlString = "https://api.map.baidu.com/geocoder/v2/?ak=AmgZttBtRXOEY7R9pkC1ScETpDUKlVef&location="
                     + QString::number(lat) +"," + QString::number(lon) + "&output=json&pois=1";
     QUrl url(urlString + "user/get");
+    qDebug() <<url<<'\n';
     QNetworkRequest request(url); // use url to build a request object
     request.setHeader(QNetworkRequest::ContentTypeHeader,QVariant("application/json;charset=utf-8")); // set request header
     netAccMana->get(request); // invoke api by using "get" method

@@ -7,7 +7,7 @@
 QT       += core gui
 QT       += network
 QT       += sql
-
+QT += 3drender
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = photoManagement
