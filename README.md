@@ -2,6 +2,11 @@
 Just a project from some undergraduates. The purpose of this project is to create a application that can classify photos and search them by key-words. We MAY add some other functions if we can.
 
 # update diary
+## 2019.7.19 21:47
+### modified by Daisy
+1.Compile the OpenCV library.
+2.Modify .pro.Add INCLUDEPATH and LIBS.However,there is one problem.I cannot handle relative path well for "INCLUDEPATH".Up to you. 
+3.Now we can include <.h>to use Opencv
 ## 2019.7.18 0:06
 ### modified by Daisy
 1.Add new class "dbPostgis" used to complete "add delete modify query"of data.

@@ -7,7 +7,7 @@
 #include <QSqlQuery>
 #include <QtCore>
 #include <QDate>
-#include <QGeometry>
+
 dbPostgis::dbPostgis(){
 }
 

@@ -7,7 +7,7 @@
 QT       += core gui
 QT       += network
 QT       += sql
-QT += 3drender
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = photoManagement
@@ -25,6 +25,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 CONFIG += c++11
+
+INCLUDEPATH+= ./opencv/include\
+              ./opencv/include/opencv\
+              ./opencv/include/opencv2
+
+
+LIBS+=-L./oepncv/lib/.*-l
+#LIBS+=-L./opencv/lib/ -llibopencv_core310\
+#      -L./opencv/lib/ -llibopencv_calib3d310\
+#      -L./opencv/lib/ -llibopencv_photo310\
+#      -L./opencv/lib/-llibopencv_imgcodecs310\
+#      -L./opencv/lib/-llibopencv_imgproc310\
+#      -L./opencv/lib/-llibopencv_shape310\
+#      -L./opencv/lib/-llibopencv_highgui310
+#      -L./oepncv/lib/-llibopencv_features2d310
+
 
 SOURCES += \
         antigeocode.cpp \

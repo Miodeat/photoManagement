@@ -5,6 +5,7 @@
 #include <QSqlDatabase>
 #include <QObject>
 #include <QSqlQuery>
+
 class dbPostgis:public QObject
 {
     Q_OBJECT
