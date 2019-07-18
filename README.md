@@ -4,13 +4,13 @@ Just a project from some undergraduates. The purpose of this project is to creat
 # update diary
 ## 2019.7.19 21:47
 ### modified by Daisy
-1.Compile the OpenCV library.
-2.Modify .pro.Add INCLUDEPATH and LIBS.However,there is one problem.I cannot handle relative path well for "INCLUDEPATH".Up to you. 
-3.Now we can include <.h>to use Opencv
+1. Compile the OpenCV library.
+2. Modify .pro file .Add INCLUDEPATH and LIBS. 
+3. Now we can include <.h>to use Opencv
 ## 2019.7.18 0:06
 ### modified by Daisy
-1.Add new class "dbPostgis" used to complete "add delete modify query"of data.
-2.add functions to complete data warehousing.
+1. Add new class "dbPostgis" used to complete "add delete modify query"of data.
+2. add functions to complete data warehousing.
 ## 2019.7.15 10:58
 ### modified by Daisy
 1.alter database photomangement. Delete columns lat and lon and add column geom.Column geom allows you to insert point data directly.Just like this "insert into photo(photo_id,taken_time,path,photo_label,geom)
