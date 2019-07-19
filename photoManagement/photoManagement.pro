@@ -32,13 +32,14 @@ SOURCES += \
         exif.cpp \
         main.cpp \
         mainwindow.cpp \
-        myface.cpp
+        face.cpp
 
 HEADERS += \
         antigeocode.h \
         dbpostgis.h \
         exif.h \
         mainwindow.h \
+        face.h
 
 
 FORMS += \
