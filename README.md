@@ -2,10 +2,17 @@
 Just a project from some undergraduates. The purpose of this project is to create a application that can classify photos and search them by key-words. We MAY add some other functions if we can.
 
 # update diary
-## 2019.7.19 21:47
+## 2019.7.19 18:41
+### modified by Submarinee
+1. add a new class:face
+2. add openCv and solve the environment fitting problem with Daisy,remmember to add bin to debug
+
+
+# update diary
+## 2019.7.18 21:47
 ### modified by Daisy
 1. Compile the OpenCV library.
-2. Modify .pro file .Add INCLUDEPATH and LIBS. 
+2. Modify .pro file .Add INCLUDEPATH and LIBS.
 3. Now we can include <.h>to use Opencv
 ## 2019.7.18 0:06
 ### modified by Daisy

@@ -31,7 +31,7 @@ SOURCES += \
         dbpostgis.cpp \
         exif.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp\
         face.cpp
 
 HEADERS += \
