@@ -10,12 +10,21 @@
 //                           License Agreement
 //                For Open Source Computer Vision Library
 //
+<<<<<<< HEAD
 <<<<<<< HEAD:photoManagement/opencv/include/opencv2/core/opencl/runtime/opencl_clamdfft.hpp
 // Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
 =======
 // Copyright (C) 2000-2008, Intel Corporation, all rights reserved.
 // Copyright (C) 2009-2011, Willow Garage Inc., all rights reserved.
 >>>>>>> 7cfe8b8f3d66adb606cbeb56f390ba40e048b820:photoManagement/opencv/include/opencv2/xphoto/dct_image_denoising.hpp
+=======
+<<<<<<< HEAD:photoManagement/opencv/include/opencv2/datasets/is_weizmann.hpp
+// Copyright (C) 2014, Itseez Inc, all rights reserved.
+=======
+// Copyright (C) 2000-2008, Intel Corporation, all rights reserved.
+// Copyright (C) 2009-2011, Willow Garage Inc., all rights reserved.
+>>>>>>> refs/remotes/origin/master:photoManagement/opencv/include/opencv2/xphoto/dct_image_denoising.hpp
+>>>>>>> refs/remotes/origin/master
 // Third party copyrights are property of their respective owners.
 //
 // Redistribution and use in source and binary forms, with or without modification,
@@ -34,7 +43,11 @@
 // This software is provided by the copyright holders and contributors "as is" and
 // any express or implied warranties, including, but not limited to, the implied
 // warranties of merchantability and fitness for a particular purpose are disclaimed.
+<<<<<<< HEAD
 // In no event shall the OpenCV Foundation or contributors be liable for any direct,
+=======
+// In no event shall the Itseez Inc or contributors be liable for any direct,
+>>>>>>> refs/remotes/origin/master
 // indirect, incidental, special, exemplary, or consequential damages
 // (including, but not limited to, procurement of substitute goods or services;
 // loss of use, data, or profits; or business interruption) however caused
@@ -44,6 +57,7 @@
 //
 //M*/
 
+<<<<<<< HEAD
 <<<<<<< HEAD:photoManagement/opencv/include/opencv2/core/opencl/runtime/opencl_clamdfft.hpp
 #ifndef OPENCV_CORE_OCL_RUNTIME_CLAMDFFT_HPP
 #define OPENCV_CORE_OCL_RUNTIME_CLAMDFFT_HPP
@@ -57,6 +71,49 @@
 #endif // HAVE_CLAMDFFT
 
 #endif // OPENCV_CORE_OCL_RUNTIME_CLAMDFFT_HPP
+=======
+<<<<<<< HEAD:photoManagement/opencv/include/opencv2/datasets/is_weizmann.hpp
+#ifndef OPENCV_DATASETS_IS_WEIZMANN_HPP
+#define OPENCV_DATASETS_IS_WEIZMANN_HPP
+
+#include <string>
+#include <vector>
+
+#include "opencv2/datasets/dataset.hpp"
+
+#include <opencv2/core.hpp>
+
+namespace cv
+{
+namespace datasets
+{
+
+//! @addtogroup datasets_is
+//! @{
+
+struct IS_weizmannObj : public Object
+{
+    std::string imageName;
+    std::string srcBw;
+    std::string srcColor;
+    std::string humanSeg; // TODO: read human segmented
+};
+
+class CV_EXPORTS IS_weizmann : public Dataset
+{
+public:
+    virtual void load(const std::string &path) CV_OVERRIDE = 0;
+
+    static Ptr<IS_weizmann> create();
+};
+
+//! @}
+
+}
+}
+
+#endif
+>>>>>>> refs/remotes/origin/master
 =======
 #ifndef __OPENCV_DCT_IMAGE_DENOISING_HPP__
 #define __OPENCV_DCT_IMAGE_DENOISING_HPP__
@@ -95,4 +152,8 @@ namespace xphoto
 }
 
 #endif // __OPENCV_DCT_IMAGE_DENOISING_HPP__
+<<<<<<< HEAD
 >>>>>>> 7cfe8b8f3d66adb606cbeb56f390ba40e048b820:photoManagement/opencv/include/opencv2/xphoto/dct_image_denoising.hpp
+=======
+>>>>>>> refs/remotes/origin/master:photoManagement/opencv/include/opencv2/xphoto/dct_image_denoising.hpp
+>>>>>>> refs/remotes/origin/master

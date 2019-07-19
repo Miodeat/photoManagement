@@ -11,6 +11,7 @@
 /* #undef OPENCV_ENABLE_NONFREE */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #define HAVE_OPENCV_ARUCO
 #define HAVE_OPENCV_BGSEGM
@@ -25,6 +26,14 @@
 #define HAVE_OPENCV_FLANN
 #define HAVE_OPENCV_GAPI
 =======
+=======
+#define HAVE_OPENCV_ARUCO
+#define HAVE_OPENCV_BGSEGM
+#define HAVE_OPENCV_BIOINSPIRED
+#define HAVE_OPENCV_CALIB3D
+#define HAVE_OPENCV_CCALIB
+#define HAVE_OPENCV_CORE
+>>>>>>> refs/remotes/origin/master
 #define HAVE_OPENCV_CVV
 #define HAVE_OPENCV_DATASETS
 #define HAVE_OPENCV_DNN
@@ -36,7 +45,10 @@
 #define HAVE_OPENCV_FUZZY
 #define HAVE_OPENCV_GAPI
 #define HAVE_OPENCV_HFS
+<<<<<<< HEAD
 >>>>>>> 7cfe8b8f3d66adb606cbeb56f390ba40e048b820
+=======
+>>>>>>> refs/remotes/origin/master
 #define HAVE_OPENCV_HIGHGUI
 #define HAVE_OPENCV_IMG_HASH
 #define HAVE_OPENCV_IMGCODECS
@@ -48,11 +60,14 @@
 #define HAVE_OPENCV_PHASE_UNWRAPPING
 #define HAVE_OPENCV_PHOTO
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define HAVE_OPENCV_STITCHING
 #define HAVE_OPENCV_VIDEO
 #define HAVE_OPENCV_VIDEOIO
 #define HAVE_OPENCV_WORLD
 =======
+=======
+>>>>>>> refs/remotes/origin/master
 #define HAVE_OPENCV_PLOT
 #define HAVE_OPENCV_QUALITY
 #define HAVE_OPENCV_REG
@@ -73,6 +88,9 @@
 #define HAVE_OPENCV_XIMGPROC
 #define HAVE_OPENCV_XOBJDETECT
 #define HAVE_OPENCV_XPHOTO
+<<<<<<< HEAD
 >>>>>>> 7cfe8b8f3d66adb606cbeb56f390ba40e048b820
+=======
+>>>>>>> refs/remotes/origin/master
 
 

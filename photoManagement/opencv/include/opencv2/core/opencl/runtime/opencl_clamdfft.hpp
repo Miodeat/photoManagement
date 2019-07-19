@@ -11,6 +11,7 @@
 //                For Open Source Computer Vision Library
 //
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:photoManagement/opencv/include/opencv2/core/opencl/runtime/opencl_clamdfft.hpp
 // Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
 =======
@@ -20,6 +21,9 @@
 =======
 // Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
 >>>>>>> 7cfe8b8f3d66adb606cbeb56f390ba40e048b820
+=======
+// Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
+>>>>>>> refs/remotes/origin/master
 // Third party copyrights are property of their respective owners.
 //
 // Redistribution and use in source and binary forms, with or without modification,
@@ -49,9 +53,12 @@
 //M*/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:photoManagement/opencv/include/opencv2/core/opencl/runtime/opencl_clamdfft.hpp
 =======
 >>>>>>> 7cfe8b8f3d66adb606cbeb56f390ba40e048b820
+=======
+>>>>>>> refs/remotes/origin/master
 #ifndef OPENCV_CORE_OCL_RUNTIME_CLAMDFFT_HPP
 #define OPENCV_CORE_OCL_RUNTIME_CLAMDFFT_HPP
 
@@ -64,6 +71,7 @@
 #endif // HAVE_CLAMDFFT
 
 #endif // OPENCV_CORE_OCL_RUNTIME_CLAMDFFT_HPP
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 #ifndef __OPENCV_DCT_IMAGE_DENOISING_HPP__
@@ -106,3 +114,5 @@ namespace xphoto
 >>>>>>> 7cfe8b8f3d66adb606cbeb56f390ba40e048b820:photoManagement/opencv/include/opencv2/xphoto/dct_image_denoising.hpp
 =======
 >>>>>>> 7cfe8b8f3d66adb606cbeb56f390ba40e048b820
+=======
+>>>>>>> refs/remotes/origin/master

@@ -10,7 +10,15 @@
 //                           License Agreement
 //                For Open Source Computer Vision Library
 //
+<<<<<<< HEAD
+<<<<<<< HEAD:photoManagement/opencv/include/opencv2/core/opencl/runtime/opencl_core.hpp
 // Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
+=======
+// Copyright (C) 2013, OpenCV Foundation, all rights reserved.
+>>>>>>> refs/remotes/origin/master:photoManagement/opencv/include/opencv2/dnn/layer.hpp
+=======
+// Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
+>>>>>>> refs/remotes/origin/master
 // Third party copyrights are property of their respective owners.
 //
 // Redistribution and use in source and binary forms, with or without modification,
@@ -39,6 +47,10 @@
 //
 //M*/
 
+<<<<<<< HEAD
+<<<<<<< HEAD:photoManagement/opencv/include/opencv2/core/opencl/runtime/opencl_core.hpp
+=======
+>>>>>>> refs/remotes/origin/master
 #ifndef OPENCV_CORE_OCL_RUNTIME_OPENCL_CORE_HPP
 #define OPENCV_CORE_OCL_RUNTIME_OPENCL_CORE_HPP
 
@@ -82,3 +94,52 @@
 #endif // HAVE_OPENCL
 
 #endif // OPENCV_CORE_OCL_RUNTIME_OPENCL_CORE_HPP
+<<<<<<< HEAD
+=======
+#ifndef OPENCV_DNN_LAYER_HPP
+#define OPENCV_DNN_LAYER_HPP
+#include <opencv2/dnn.hpp>
+
+namespace cv {
+namespace dnn {
+CV__DNN_INLINE_NS_BEGIN
+//! @addtogroup dnn
+//! @{
+//!
+//! @defgroup dnnLayerFactory Utilities for New Layers Registration
+//! @{
+
+/** @brief %Layer factory allows to create instances of registered layers. */
+class CV_EXPORTS LayerFactory
+{
+public:
+
+    //! Each Layer class must provide this function to the factory
+    typedef Ptr<Layer>(*Constructor)(LayerParams &params);
+
+    //! Registers the layer class with typename @p type and specified @p constructor. Thread-safe.
+    static void registerLayer(const String &type, Constructor constructor);
+
+    //! Unregisters registered layer with specified type name. Thread-safe.
+    static void unregisterLayer(const String &type);
+
+    /** @brief Creates instance of registered layer.
+     *  @param type type name of creating layer.
+     *  @param params parameters which will be used for layer initialization.
+     *  @note Thread-safe.
+     */
+    static Ptr<Layer> createLayerInstance(const String &type, LayerParams& params);
+
+private:
+    LayerFactory();
+};
+
+//! @}
+//! @}
+CV__DNN_INLINE_NS_END
+}
+}
+#endif
+>>>>>>> refs/remotes/origin/master:photoManagement/opencv/include/opencv2/dnn/layer.hpp
+=======
+>>>>>>> refs/remotes/origin/master

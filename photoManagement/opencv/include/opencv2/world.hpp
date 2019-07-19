@@ -40,10 +40,25 @@
 //
 //M*/
 
+<<<<<<< HEAD:photoManagement/opencv/include/opencv2/world.hpp
 #ifndef OPENCV_WORLD_HPP
 #define OPENCV_WORLD_HPP
 
 #include "opencv2/core.hpp"
+=======
+#ifndef __OPENCV_XPHOTO_HPP__
+#define __OPENCV_XPHOTO_HPP__
+
+/** @defgroup xphoto Additional photo processing algorithms
+*/
+
+#include "xphoto/inpainting.hpp"
+#include "xphoto/white_balance.hpp"
+#include "xphoto/dct_image_denoising.hpp"
+#include "xphoto/bm3d_image_denoising.hpp"
+#include "xphoto/oilpainting.hpp"
+#include "xphoto/tonemap.hpp"
+>>>>>>> refs/remotes/origin/master:photoManagement/opencv/include/opencv2/xphoto.hpp
 
 #ifdef __cplusplus
 namespace cv

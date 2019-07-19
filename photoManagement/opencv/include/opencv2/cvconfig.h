@@ -56,7 +56,10 @@
 /* #undef HAVE_D3D11 */
 /* #undef HAVE_D3D10 */
 /* #undef HAVE_D3D9 */
+<<<<<<< HEAD
 >>>>>>> 7cfe8b8f3d66adb606cbeb56f390ba40e048b820
+=======
+>>>>>>> refs/remotes/origin/master
 
 /* Eigen Matrix & Linear Algebra Library */
 /* #undef HAVE_EIGEN */
@@ -72,6 +75,7 @@
 
 /* Halide support */
 /* #undef HAVE_HALIDE */
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 /* Vulkan support */
@@ -90,6 +94,12 @@
 /* Vulkan support */
 /* #undef HAVE_VULKAN */
 
+=======
+
+/* Vulkan support */
+/* #undef HAVE_VULKAN */
+
+>>>>>>> refs/remotes/origin/master
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
 
@@ -98,7 +108,10 @@
 /* #undef HAVE_IPP_ICV */
 /* #undef HAVE_IPP_IW */
 /* #undef HAVE_IPP_IW_LL */
+<<<<<<< HEAD
 >>>>>>> 7cfe8b8f3d66adb606cbeb56f390ba40e048b820
+=======
+>>>>>>> refs/remotes/origin/master
 
 /* JPEG-2000 codec */
 #define HAVE_JASPER
@@ -125,10 +138,14 @@
 
 /* NVIDIA OpenCL D3D Extensions support */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define HAVE_OPENCL_D3D11_NV
 =======
 /* #undef HAVE_OPENCL_D3D11_NV */
 >>>>>>> 7cfe8b8f3d66adb606cbeb56f390ba40e048b820
+=======
+/* #undef HAVE_OPENCL_D3D11_NV */
+>>>>>>> refs/remotes/origin/master
 
 /* OpenEXR codec */
 #define HAVE_OPENEXR

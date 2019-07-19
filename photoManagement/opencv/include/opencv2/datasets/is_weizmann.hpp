@@ -10,7 +10,16 @@
 //                           License Agreement
 //                For Open Source Computer Vision Library
 //
+<<<<<<< HEAD
+<<<<<<< HEAD:photoManagement/opencv/include/opencv2/datasets/is_weizmann.hpp
 // Copyright (C) 2014, Itseez Inc, all rights reserved.
+=======
+// Copyright (C) 2000-2008, Intel Corporation, all rights reserved.
+// Copyright (C) 2009-2011, Willow Garage Inc., all rights reserved.
+>>>>>>> refs/remotes/origin/master:photoManagement/opencv/include/opencv2/xphoto/dct_image_denoising.hpp
+=======
+// Copyright (C) 2014, Itseez Inc, all rights reserved.
+>>>>>>> refs/remotes/origin/master
 // Third party copyrights are property of their respective owners.
 //
 // Redistribution and use in source and binary forms, with or without modification,
@@ -39,6 +48,10 @@
 //
 //M*/
 
+<<<<<<< HEAD
+<<<<<<< HEAD:photoManagement/opencv/include/opencv2/datasets/is_weizmann.hpp
+=======
+>>>>>>> refs/remotes/origin/master
 #ifndef OPENCV_DATASETS_IS_WEIZMANN_HPP
 #define OPENCV_DATASETS_IS_WEIZMANN_HPP
 
@@ -79,3 +92,45 @@ public:
 }
 
 #endif
+<<<<<<< HEAD
+=======
+#ifndef __OPENCV_DCT_IMAGE_DENOISING_HPP__
+#define __OPENCV_DCT_IMAGE_DENOISING_HPP__
+
+/** @file
+@date Jun 26, 2014
+@author Yury Gitman
+*/
+
+#include <opencv2/core.hpp>
+
+namespace cv
+{
+namespace xphoto
+{
+
+//! @addtogroup xphoto
+//! @{
+
+    /** @brief The function implements simple dct-based denoising
+
+    <http://www.ipol.im/pub/art/2011/ys-dct/>.
+    @param src source image
+    @param dst destination image
+    @param sigma expected noise standard deviation
+    @param psize size of block side where dct is computed
+
+    @sa
+       fastNlMeansDenoising
+     */
+    CV_EXPORTS_W void dctDenoising(const Mat &src, Mat &dst, const double sigma, const int psize = 16);
+
+//! @}
+
+}
+}
+
+#endif // __OPENCV_DCT_IMAGE_DENOISING_HPP__
+>>>>>>> refs/remotes/origin/master:photoManagement/opencv/include/opencv2/xphoto/dct_image_denoising.hpp
+=======
+>>>>>>> refs/remotes/origin/master

@@ -11,7 +11,11 @@
 //                For Open Source Computer Vision Library
 //
 // Copyright (C) 2000-2008, Intel Corporation, all rights reserved.
+<<<<<<< HEAD
 // Copyright (C) 2009, Willow Garage Inc., all rights reserved.
+=======
+// Copyright (C) 2009-2010, Willow Garage Inc., all rights reserved.
+>>>>>>> refs/remotes/origin/master
 // Third party copyrights are property of their respective owners.
 //
 // Redistribution and use in source and binary forms, with or without modification,
@@ -40,6 +44,15 @@
 //
 //M*/
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:photoManagement/opencv/include/opencv2/world.hpp
+#ifndef OPENCV_WORLD_HPP
+#define OPENCV_WORLD_HPP
+
+#include "opencv2/core.hpp"
+=======
+>>>>>>> refs/remotes/origin/master
 #ifndef __OPENCV_XPHOTO_HPP__
 #define __OPENCV_XPHOTO_HPP__
 
@@ -52,5 +65,19 @@
 #include "xphoto/bm3d_image_denoising.hpp"
 #include "xphoto/oilpainting.hpp"
 #include "xphoto/tonemap.hpp"
+<<<<<<< HEAD
+=======
+>>>>>>> refs/remotes/origin/master:photoManagement/opencv/include/opencv2/xphoto.hpp
+
+#ifdef __cplusplus
+namespace cv
+{
+
+CV_EXPORTS_W bool initAll();
+
+}
+
+#endif
+>>>>>>> refs/remotes/origin/master
 
 #endif
