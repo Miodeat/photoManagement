@@ -6,6 +6,7 @@
 #include <QSqlDriverCreator>
 #include <QSqlQuery>
 #include <QMessageBox>
+#include"face.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -20,6 +21,8 @@ MainWindow::MainWindow(QWidget *parent) :
     db.insertAvatarInfo(6,avatar_label);
     db.insertPhotoInfo(4,db.toDate(exif.DateTimeOriginal.c_str()),"中北大学",geoCoords,photo_label,
                        3);
+    Face face;
+    face.test();
 }
 
 MainWindow::~MainWindow()

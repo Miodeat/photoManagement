@@ -46,6 +46,7 @@ SOURCES += \
         antigeocode.cpp \
         dbpostgis.cpp \
         exif.cpp \
+        face.cpp \
         main.cpp \
         mainwindow.cpp
 
@@ -53,6 +54,7 @@ HEADERS += \
         antigeocode.h \
         dbpostgis.h \
         exif.h \
+        face.h \
         mainwindow.h
 
 FORMS += \
