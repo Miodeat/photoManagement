@@ -2,6 +2,12 @@
 Just a project from some undergraduates. The purpose of this project is to create a application that can classify photos and search them by key-words. We MAY add some other functions if we can.
 
 # update diary
+## 2019.7.19 22:12
+### modified by Submarinee
+1. judge  whether network is connected
+2. add c++ facepp_cpp_sdk-master but .pro file is not yet adapted(needed to be adapted)
+
+# update diary
 ## 2019.7.19 18:41
 ### modified by Submarinee
 1. add a new class:face

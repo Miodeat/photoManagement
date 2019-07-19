@@ -31,6 +31,7 @@ public:
     QJsonObject getFaceFeature(); //联网则使用face++,否则openCv
     void getFaceRectangle();
     int connetNetWork(); //0为没联网 1为联网
+     void result(QNetworkReply *rep);
 
 private:
     QString Facedescription;
