@@ -26,36 +26,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
-INCLUDEPATH+= ./opencv/include\
-              ./opencv/include/opencv\
-              ./opencv/include/opencv2
-
-
-LIBS+=-L./oepncv/lib/.*-l
-#LIBS+=-L./opencv/lib/ -llibopencv_core310\
-#      -L./opencv/lib/ -llibopencv_calib3d310\
-#      -L./opencv/lib/ -llibopencv_photo310\
-#      -L./opencv/lib/-llibopencv_imgcodecs310\
-#      -L./opencv/lib/-llibopencv_imgproc310\
-#      -L./opencv/lib/-llibopencv_shape310\
-#      -L./opencv/lib/-llibopencv_highgui310
-#      -L./oepncv/lib/-llibopencv_features2d310
-
-
 SOURCES += \
         antigeocode.cpp \
         dbpostgis.cpp \
         exif.cpp \
-        face.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        myface.cpp
 
 HEADERS += \
         antigeocode.h \
         dbpostgis.h \
         exif.h \
-        face.h \
-        mainwindow.h
+        mainwindow.h \
+        myface.h
 
 FORMS += \
         mainwindow.ui
@@ -67,3 +51,21 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     res.qrc
+INCLUDEPATH += opencv2/include
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_highgui410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_imgcodecs410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_imgproc410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_objdetect410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_calib3d410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_ccalib410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_core410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_photo410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_video410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_videoio410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_face410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_aruco410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_datasets410.dll
+LIBS += -L$$PWD/opencv/lib/ -llibopencv_flann410.dll
+
+INCLUDEPATH += $$PWD/opencv/include
+DEPENDPATH += $$PWD/opencv/include
