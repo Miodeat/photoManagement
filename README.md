@@ -2,6 +2,12 @@
 Just a project from some undergraduates. The purpose of this project is to create a application that can classify photos and search them by key-words. We MAY add some other functions if we can.
 
 # update diary
+## 2019.7.20 14:56
+### modified by Submarinee
+1. OpenCV detect face and draw rectangle
+2. modify the  harr xml file, maybe later we can detect  eyes full body  or something else。
+
+# update diary
 ## 2019.7.19 22:12
 ### modified by Submarinee
 1. judge  whether network is connected

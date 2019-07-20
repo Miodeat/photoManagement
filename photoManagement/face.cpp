@@ -1,5 +1,7 @@
 #include "face.h"
+
 #include<QObject>
+using namespace std;
 Face::Face()
 {
 
@@ -7,11 +9,9 @@ Face::Face()
 
 void Face::test()
 {
-    printf("Hello Open CV!");
-
-    Mat img = imread("../photoManagement/test.jpg");  //这个图片需要自己准备，放在project目录下，或者直接写绝对路径
-    imshow("test", img);//显示图片6秒
-    waitKey(6000);
+    qDebug()<<("Hello Open CV!");
+    QString filepath="../photoManagement/hezhao2.jpg";
+    OpenCVgetFaceRectangle(filepath);
 
 
 }
@@ -51,11 +51,63 @@ int Face::connetNetWork(){
 
     }
 
+}
 
+//之后也可以mainwindow里面加arraylist<filepath> 再写一个函数
+void Face::OpenCVgetFaceRectangle(QString filePath){
+   std::string  filepath =filePath.toStdString();
+    Mat image=imread(filepath);
+    if(!image.data){
+        qDebug() <<("openCV did not find the photo");
+        return;
+    }
+    qDebug() <<("find the photo,start openCV ");
+    detectAndDisplay(image);
+    return;
+}
 
+void Face::detectAndDisplay(Mat frame){
+    if (!face_cascade.load("../photoManagement/opencv/data/haarcascades_cuda/haarcascade_frontalface_alt.xml"))
+    {
+        qDebug() <<("--(!)Error loading face cascade\n");
+        return ;
+    }
 
+    std::vector<Rect> faces;
+    int scale=1;
+    Mat frame_gray;
+    cvtColor(frame, frame_gray, CV_BGR2GRAY );
+    equalizeHist( frame_gray, frame_gray ); //直方图均衡化  void equalizeHist(InputArray_src, OutputArray dst)
+     //void CascadeClassifier::detectMultiScale( const Mat& image, vector<Rect>& objects,
+     //double scaleFactor, int minNeighbors,int flags, Size minObjectSize, Size maxObjectSize)
+    face_cascade.detectMultiScale( frame_gray, faces, 1.1, 3, 0 );
+      qDebug() <<faces.size();
+    //画脸
+      // 定义7种颜色，用于标记人脸
+        Scalar colors[] =
+        {
+            // 红橙黄绿青蓝紫
+            CV_RGB(255, 0, 0),
+            CV_RGB(255, 97, 0),
+            CV_RGB(255, 255, 0),
+            CV_RGB(0, 255, 0),
+            CV_RGB(0, 255, 255),
+            CV_RGB(0, 0, 255),
+            CV_RGB(160, 32, 240)
+        };
+    for (int i = 0; i < faces.size();i++)
+        {
+            Point  center;
+            int radius;
+            center.x = cvRound((faces[i].x + faces[i].width * 0.5));
+            center.y = cvRound((faces[i].y + faces[i].height * 0.5));
 
+            radius = cvRound((faces[i].width + faces[i].height) * 0.3);
+            circle(frame, center, radius, colors[i % 7], 1.5);
+        }
 
-
+    imshow("OpenCv Face Detection",frame);
+    waitKey(0);
+    return ;
 
 }
